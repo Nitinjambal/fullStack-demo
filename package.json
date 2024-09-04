@@ -1,0 +1,17 @@
+{
+  "name": "fullstack-demo",
+  "version": "1.0.0",
+"scripts": {
+    "build": "npm --prefix \"Frontend/todo-app\" run build",
+    "start": "npm run build && node Backend/index.js",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend": "cd \"Frontend/todo-app\" && npm run dev",
+    "backend": "cd Backend && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
