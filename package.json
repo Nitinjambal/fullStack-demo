@@ -2,11 +2,11 @@
   "name": "fullstack-demo",
   "version": "1.0.0",
 "scripts": {
-    "build": "npm --prefix \"Frontend/todo-app\" run build",
-    "start": "npm run build && node Backend/index.js",
-    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
-    "frontend": "cd \"Frontend/todo-app\" && npm run dev",
-    "backend": "cd Backend && npm start"
+  "frontend": "cd \"Frontend/todo-app\" && npm run dev",
+  "backend": "cd Backend && npm start",
+  "build": "npm --prefix \"Frontend/todo-app\" run build && vercel --prod",
+      "start": "npm run build && node Backend/index.js",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\""
   },
   "keywords": [],
   "author": "",
